@@ -15,6 +15,7 @@ class Quadratic extends Linear implements \core\EquationInterface
 		   return $this->ur($b,$c);
 		}
 		$dir = $this->dir($a, $b, $c);
+		Log::log("Equation is quadratic");
 		if ($dir > 0) 
 		{
 			$x = (-1*$b + sqrt($dir))/(2*$a);
