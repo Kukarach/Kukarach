@@ -9,6 +9,8 @@ include_once("zxc/Linear.php");
 include_once("zxc/Quadratic.php");
 include_once("zxc/Log.php");
 $co_arr = [];
+$file = fopen("version", "r");
+zxc\Log::log('Version: ' . fread($file, 1024));
 foreach (["a", "b", "c"] as $co) {
     echo "Enter " . $co . ": ";
     $line = stream_get_line(STDIN, 1024, PHP_EOL);
