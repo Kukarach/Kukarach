@@ -9,7 +9,7 @@ include_once("zxc/Linear.php");
 include_once("zxc/Quadratic.php");
 include_once("zxc/Log.php");
 $co_arr = [];
-$file = fopen("version", "r");
+$file = fopen(__DIR__."/version", "r");
 zxc\Log::log('Version: ' . fread($file, 1024));
 foreach (["a", "b", "c"] as $co) {
     echo "Enter " . $co . ": ";
